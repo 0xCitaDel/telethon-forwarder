@@ -1,0 +1,37 @@
+accounts:
+  - name: nosomename
+    session: nosomename.session
+    api_id:
+    api_hash:
+    skip_own: true
+
+    sources:
+      - "@SomeBot"
+
+    routes:
+      - name: deposit_card
+        mode: copy    # "forward" | "copy"
+        target: -123456789
+        match: "any"  # "any" | "all"
+        keywords:
+          - some
+        case_sensitive: false
+
+      - name: withdraw_card
+        mode: copy    # "forward" | "copy"
+        target: -987654321
+        match: "any"  # "any" | "all"
+        keywords:
+          - some
+        case_sensitive: false
+
+    default_route:
+      default_target: -000000000000
+      default_mode: copy
+
+    webhook:
+      url: "https://some.site"
+      token: "SUPER_SECRET_TOKEN"
+      routes: ["deposit_card"]
+      send_unmatched: false
+      timeout: 10
