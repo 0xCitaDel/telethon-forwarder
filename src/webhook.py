@@ -16,7 +16,7 @@ class WebhookClient:
             "Content-Type": "application/x-www-form-urlencoded",
         }
         try:
-            async with self._session.post(cfg.url, json=payload, headers=headers, timeout=cfg.timeout) as resp:
+            async with self._session.post(cfg.url, data=payload, headers=headers, timeout=cfg.timeout) as resp:
                 if resp.status >= 400:
                     text = await resp.text()
                     self._log.warning("Webhook HTTP %s: %s", resp.status, text[:500])
