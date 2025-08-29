@@ -152,6 +152,9 @@ class AccountWorker:
                     )
                     return
                 """
+                if dest_ref is None:
+                    return
+
                 mode = self.cfg.default_route.default_mode
                 route_name = "default"
                 matched = False
