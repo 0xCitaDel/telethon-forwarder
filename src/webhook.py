@@ -13,7 +13,7 @@ class WebhookClient:
     async def post_json(self, cfg: WebhookConfig, payload: Dict[str, Any]) -> None:
         headers = {
             "Authorization": f"Bearer {cfg.token}",
-            "Content-Type": "application/json",
+            "Content-Type": "application/x-www-form-urlencoded",
         }
         try:
             async with self._session.post(cfg.url, json=payload, headers=headers, timeout=cfg.timeout) as resp:

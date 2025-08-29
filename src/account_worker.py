@@ -120,9 +120,9 @@ class AccountWorker:
                 return
 
         payload = {
-            "account_name": self.cfg.name,
-            "route_name": route_name,
-            "text": text,
+            # "account_name": self.cfg.name,
+            # "route_name": route_name,
+            "message": text
         }
         await self.http.post_json(wh, payload)
 
