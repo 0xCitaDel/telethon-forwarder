@@ -21,7 +21,7 @@ class WebhookClient:
                     text = await resp.text()
                     self._log.warning("Webhook HTTP %s: %s", resp.status, text[:500])
                 else:
-                    self._log.info("Webhook sent: %s", payload.get("route_name"))
+                    self._log.info("Webhook sent: %s", resp.status)
         except Exception as e:
             self._log.error("Webhook error: %s", e)
 

@@ -6,9 +6,14 @@ from src.account_worker import AccountWorker
 from src.config import load_accounts_from_config
 from src.webhook import WebhookClient
 
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
+    handlers=[
+        logging.FileHandler("app.log", encoding="utf-8"),
+        logging.StreamHandler()
+    ]
 )
 
 log = logging.getLogger("tg-forwarder")
