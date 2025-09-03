@@ -2,6 +2,6 @@ config.yaml
 config.prod.yaml
 venv
 *.session
-src/__pycache__
+**/__pycache__/
 app.log
 errors.log
