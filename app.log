@@ -7,3 +7,57 @@
 2025-08-29 13:17:23,427 [INFO] telethon.network.mtprotosender: Disconnection from 149.154.167.51:443/TcpFull complete!
 2025-08-29 13:17:23,430 [INFO] telethon.network.mtprotosender: Not disconnecting (already have no connection)
 2025-08-29 13:17:23,433 [INFO] tg-forwarder: Interrupted by user
+2025-08-29 16:32:56,068 [INFO] telethon.network.mtprotosender: Connecting to 149.154.167.51:443/TcpFull...
+2025-08-29 16:32:56,179 [INFO] telethon.network.mtprotosender: Connection to 149.154.167.51:443/TcpFull complete!
+2025-08-29 16:32:56,964 [INFO] Account[nosomename]: Logged in as nosomename
+2025-08-29 16:32:57,095 [INFO] Account[nosomename]: Listening source: Kanfar01Bot
+2025-08-29 16:32:57,096 [INFO] Account[nosomename]: Ready. Waiting for messages...
+2025-08-29 16:33:02,444 [INFO] telethon.network.mtprotosender: Disconnecting from 149.154.167.51:443/TcpFull...
+2025-08-29 16:33:02,445 [INFO] telethon.network.mtprotosender: Disconnection from 149.154.167.51:443/TcpFull complete!
+2025-08-29 16:33:02,449 [INFO] telethon.network.mtprotosender: Not disconnecting (already have no connection)
+2025-08-29 16:33:02,452 [INFO] tg-forwarder: Interrupted by user
+2025-08-29 16:33:26,923 [INFO] telethon.network.mtprotosender: Connecting to 149.154.167.51:443/TcpFull...
+2025-08-29 16:33:27,037 [INFO] telethon.network.mtprotosender: Connection to 149.154.167.51:443/TcpFull complete!
+2025-08-29 16:33:28,227 [INFO] Account[nosomename]: Logged in as nosomename
+2025-08-29 16:33:28,408 [INFO] Account[nosomename]: Listening source: Kanfar01Bot
+2025-08-29 16:33:28,409 [INFO] Account[nosomename]: Ready. Waiting for messages...
+2025-08-29 16:33:30,852 [INFO] telethon.network.mtprotosender: Disconnecting from 149.154.167.51:443/TcpFull...
+2025-08-29 16:33:30,852 [INFO] telethon.network.mtprotosender: Disconnection from 149.154.167.51:443/TcpFull complete!
+2025-08-29 16:33:30,856 [INFO] telethon.network.mtprotosender: Not disconnecting (already have no connection)
+2025-08-29 16:33:30,859 [INFO] tg-forwarder: Interrupted by user
+2025-09-03 11:38:11,462 [INFO] telethon.network.mtprotosender: Connecting to 149.154.167.51:443/TcpFull...
+2025-09-03 11:38:11,572 [INFO] telethon.network.mtprotosender: Connection to 149.154.167.51:443/TcpFull complete!
+2025-09-03 11:38:12,732 [INFO] Account[nosomename]: Logged in as nosomename
+2025-09-03 11:38:12,943 [INFO] Account[nosomename]: Listening source: Kanfar01Bot
+2025-09-03 11:38:12,944 [INFO] Account[nosomename]: Ready. Waiting for messages...
+2025-09-03 11:38:23,742 [INFO] Webhook: Webhook sent: 200
+2025-09-03 11:38:23,743 [INFO] Account[nosomename]: #deposit_card -> Some chant [copy]
+2025-09-03 11:38:58,264 [INFO] telethon.network.mtprotosender: Disconnecting from 149.154.167.51:443/TcpFull...
+2025-09-03 11:38:58,264 [INFO] telethon.network.mtprotosender: Disconnection from 149.154.167.51:443/TcpFull complete!
+2025-09-03 11:38:58,269 [INFO] telethon.network.mtprotosender: Not disconnecting (already have no connection)
+2025-09-03 11:38:58,273 [INFO] tg-forwarder: Interrupted by user
+2025-09-03 11:40:34,863 [INFO] telethon.network.mtprotosender: Connecting to 149.154.167.51:443/TcpFull...
+2025-09-03 11:40:34,974 [INFO] telethon.network.mtprotosender: Connection to 149.154.167.51:443/TcpFull complete!
+2025-09-03 11:40:35,652 [INFO] Account[nosomename]: Logged in as nosomename
+2025-09-03 11:40:35,775 [INFO] Account[nosomename]: Listening source: Kanfar01Bot
+2025-09-03 11:40:35,776 [INFO] Account[nosomename]: Ready. Waiting for messages...
+2025-09-03 11:40:44,248 [INFO] telethon.client.updates: Got difference for channel 3024795989 updates
+2025-09-03 11:40:44,524 [INFO] Webhook: Webhook sent: 200
+2025-09-03 11:40:44,525 [INFO] Account[nosomename]: #deposit_card -> Some chant [copy]
+2025-09-03 11:40:49,398 [ERROR] Account[nosomename]: Error handling message: Could not find the input entity for PeerChannel(channel_id=3024795981) (PeerChannel). Please read https://docs.telethon.dev/en/stable/concepts/entities.html to find out more details.
+Traceback (most recent call last):
+  File "/Users/some/App/forwarding_bot/src/account_worker.py", line 164, in _on_new_message
+    dest = await self.resolve_target(dest_ref)
+  File "/Users/some/App/forwarding_bot/src/account_worker.py", line 59, in resolve_target
+    ent = await self.client.get_entity(normalize_chat_ref(target))
+  File "/Users/some/App/forwarding_bot/venv/lib/python3.9/site-packages/telethon/client/users.py", line 298, in get_entity
+    inputs.append(await self.get_input_entity(x))
+  File "/Users/some/App/forwarding_bot/venv/lib/python3.9/site-packages/telethon/client/users.py", line 474, in get_input_entity
+    raise ValueError(
+ValueError: Could not find the input entity for PeerChannel(channel_id=3024795981) (PeerChannel). Please read https://docs.telethon.dev/en/stable/concepts/entities.html to find out more details.
+2025-09-03 11:41:12,289 [INFO] Webhook: Webhook sent: 200
+2025-09-03 11:41:12,289 [INFO] Account[nosomename]: #deposit_card -> Some chant [copy]
+2025-09-03 11:41:16,833 [INFO] telethon.network.mtprotosender: Disconnecting from 149.154.167.51:443/TcpFull...
+2025-09-03 11:41:16,833 [INFO] telethon.network.mtprotosender: Disconnection from 149.154.167.51:443/TcpFull complete!
+2025-09-03 11:41:16,837 [INFO] telethon.network.mtprotosender: Not disconnecting (already have no connection)
+2025-09-03 11:41:16,841 [INFO] tg-forwarder: Interrupted by user

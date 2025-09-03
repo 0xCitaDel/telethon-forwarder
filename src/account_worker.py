@@ -73,10 +73,12 @@ class AccountWorker:
                 wait = int(getattr(e, "seconds", 0)) or 1
                 self._log.warning("SlowMode %ss — waiting and will retry", wait)
                 await asyncio.sleep(wait + 1)
-            except errors.RetryAfter as e:
-                wait = int(getattr(e, "seconds", 0)) or 1
-                self._log.warning("RetryAfter %ss — waiting and will retry", wait)
-                await asyncio.sleep(wait + 1)
+            except errors.ChannelPrivateError as e:
+                self._log.error(f"ChannelPrivateError: {e} – skipping this task")
+                return None
+            except Exception as e:
+                self._log.error(f"Unexpected error: {type(e).__name__} – {e}")
+                return None
 
     async def _send_copy_single(self, dest: Any, msg: Message) -> Optional[Message]:
         """

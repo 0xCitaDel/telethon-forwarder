@@ -7,11 +7,16 @@ from src.config import load_accounts_from_config
 from src.webhook import WebhookClient
 
 
+error_handler = logging.FileHandler("errors.log", encoding="utf-8")
+error_handler.setLevel(logging.ERROR)
+
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
     handlers=[
         logging.FileHandler("app.log", encoding="utf-8"),
+        error_handler,
         logging.StreamHandler()
     ]
 )
